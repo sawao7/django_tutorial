@@ -25,7 +25,13 @@ class InquiryView(generic.FormView):
 class DiaryListView(LoginRequiredMixin, generic.ListView):
     model = Diary
     template_name = 'diary_list.html'
+    paginate_by = 2
 
     def get_queryset(self):
         diaries = Diary.objects.filter(user=self.request.user).order_by('-created_at')
         return diaries
+
+class DiaryDetailView(LoginReaquireMixin, generic.DetailView):
+    model = Diary
+    template_name = 'diary_detail.html'
+    pk_url_kwarg = 'id'
