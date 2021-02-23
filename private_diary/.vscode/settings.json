@@ -1,0 +1,5 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": false,
+    "python.pythonPath": "/Users/bunkaich/Development/03_python/venv_private_diary/bin/python3"
+}
